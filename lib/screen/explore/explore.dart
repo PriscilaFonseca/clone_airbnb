@@ -1,4 +1,4 @@
-import 'package:clone_airbnb/components/floating_activing_button_widget.dart';
+import 'package:clone_airbnb/components/floating_action_button_widget.dart';
 import 'package:clone_airbnb/screen/explore/components/list_categories_widget.dart';
 import 'package:clone_airbnb/components/search_widget.dart';
 import 'package:clone_airbnb/screen/explore/components/places_to_trips_widget.dart';
