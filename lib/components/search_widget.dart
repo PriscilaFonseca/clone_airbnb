@@ -38,30 +38,25 @@ class SearchWidget extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(
-                    height: 40,
-                    width: size.width * 0.03,
-                  ),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       _buildTitleAndSubtitle(
                         context,
-                        'Para Onde?',
-                        'Qualquer lugar•Qualquer semana•Hosp...',
+                        'Where to?',
+                        'Anywhere • Any Week • Add guests',
                       ),
                     ],
                   ),
-                  SizedBox(
-                    width: size.width * 0.01,
-                  ),
+                  const Spacer(),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       SizedBox(
                         height: 40,
                         width: 40,
-                        child: _buildFiltes(context, FontAwesomeIcons.sliders),
+                        child: _buildFilters(context, FontAwesomeIcons.sliders),
                       ),
                     ],
                   ),
@@ -114,7 +109,6 @@ class SearchWidget extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 16,
-            wordSpacing: 1.5,
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
@@ -122,8 +116,8 @@ class SearchWidget extends StatelessWidget {
         Text(
           subtitle,
           style: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
             color: Colors.grey,
           ),
         ),
@@ -131,7 +125,7 @@ class SearchWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildFiltes(
+  Widget _buildFilters(
     context,
     IconData icon,
   ) {

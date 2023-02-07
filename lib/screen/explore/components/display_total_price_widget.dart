@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ShowTotalPriceWidget extends StatefulWidget {
-  const ShowTotalPriceWidget({super.key});
+class DisplayTotalPriceWidget extends StatefulWidget {
+  const DisplayTotalPriceWidget({super.key});
 
   @override
-  State<ShowTotalPriceWidget> createState() => _ShowTotalPriceWidgetState();
+  State<DisplayTotalPriceWidget> createState() =>
+      _DisplayTotalPriceWidgetState();
 }
 
-class _ShowTotalPriceWidgetState extends State<ShowTotalPriceWidget> {
+class _DisplayTotalPriceWidgetState extends State<DisplayTotalPriceWidget> {
   bool _isSelected = false;
 
   final MaterialStateProperty<Icon?> thumbIcon =
@@ -27,7 +28,7 @@ class _ShowTotalPriceWidgetState extends State<ShowTotalPriceWidget> {
     return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: Container(
-        height: 100,
+        height: size.height * 0.1,
         width: size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -49,7 +50,7 @@ class _ShowTotalPriceWidgetState extends State<ShowTotalPriceWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Mostrar preço total',
+                        'Display total price',
                         style: TextStyle(
                           height: 1.2,
                           fontSize: 18,
@@ -62,7 +63,7 @@ class _ShowTotalPriceWidgetState extends State<ShowTotalPriceWidget> {
                     ],
                   ),
                   const Text(
-                    'Inclui todas as taxas,sem\nimpostos',
+                    'Includes all fees, before taxes',
                     style: TextStyle(
                       color: Color(
                         0xFF9E9E9E,
@@ -90,7 +91,7 @@ class _ShowTotalPriceWidgetState extends State<ShowTotalPriceWidget> {
 
   Widget _buildSwitch(context) {
     return Transform.scale(
-      scale: 0.8,
+      scale: 1,
       child: CupertinoSwitch(
         value: _isSelected,
         activeColor: Colors.black,

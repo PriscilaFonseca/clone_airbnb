@@ -1,6 +1,7 @@
-import 'package:clone_airbnb/screen/explore/components/list_icons_widgets.dart';
+import 'package:clone_airbnb/screen/explore/components/list_categories_widget.dart';
 import 'package:clone_airbnb/components/search_widget.dart';
-import 'package:clone_airbnb/screen/explore/components/show_total_price.dart';
+import 'package:clone_airbnb/screen/explore/components/places_to_trips_widget.dart';
+import 'package:clone_airbnb/screen/explore/components/display_total_price_widget.dart';
 import 'package:flutter/material.dart';
 
 class ExploreScreenWidget extends StatelessWidget {
@@ -8,7 +9,6 @@ class ExploreScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
@@ -20,9 +20,30 @@ class ExploreScreenWidget extends StatelessWidget {
               height: 2,
             ),
             ListIconsCategoriesWidget(),
-            ShowTotalPriceWidget(),
+            DisplayTotalPriceWidget(),
+            PlacesToTripsWidget(),
           ],
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FloatingActionButton.extended(
+            onPressed: () {},
+            label: const Text(
+              'Map',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            icon: const Icon(
+              Icons.map,
+              size: 24,
+            ),
+            backgroundColor: Colors.black,
+          ),
+        ],
       ),
     );
   }

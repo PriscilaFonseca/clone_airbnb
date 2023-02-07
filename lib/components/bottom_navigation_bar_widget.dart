@@ -61,7 +61,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite_border),
-                label: 'Favorites',
+                label: 'Wishlists',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.travel_explore_outlined),
@@ -69,11 +69,11 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.messenger_outline_outlined),
-                label: 'Messages',
+                label: 'Inbox',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline),
-                label: 'Account',
+                label: 'Profile',
               ),
             ],
           ),
