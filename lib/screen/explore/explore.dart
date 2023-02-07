@@ -1,3 +1,4 @@
+import 'package:clone_airbnb/components/floating_activing_button_widget.dart';
 import 'package:clone_airbnb/screen/explore/components/list_categories_widget.dart';
 import 'package:clone_airbnb/components/search_widget.dart';
 import 'package:clone_airbnb/screen/explore/components/places_to_trips_widget.dart';
@@ -25,26 +26,7 @@ class ExploreScreenWidget extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FloatingActionButton.extended(
-            onPressed: () {},
-            label: const Text(
-              'Map',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            icon: const Icon(
-              Icons.map,
-              size: 24,
-            ),
-            backgroundColor: Colors.black,
-          ),
-        ],
-      ),
+      floatingActionButton: const FloatingActionButtonWidget(),
     );
   }
 }
