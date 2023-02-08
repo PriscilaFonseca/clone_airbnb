@@ -33,6 +33,7 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
               nights: _listPlaces[index].nights,
               dateCheckIn: _listPlaces[index].dateCheckIn,
               dateCheckOut: _listPlaces[index].dateCheckOut,
+              isFavorite: _listPlaces[index].isFavorite,
               price: _listPlaces[index].price,
             ),
           );
@@ -44,12 +45,14 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
   final List<Place> _listPlaces = <Place>[
     Place(
       title: 'San Roque de Brava, Costa Rica',
+      category: 'Castles',
       price: 8.984,
       evaluation: 5.0,
       kilometers: 404,
       nights: 5,
       dateCheckIn: DateTime(2023, 05, 12),
       dateCheckOut: DateTime(2023, 05, 17),
+      isFavorite: false,
       images: [
         'assets/images/image_home_1.jpg',
         'assets/images/image_home_2.jpg',
@@ -59,12 +62,14 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
     ),
     Place(
       title: 'Austin, Texas, US',
+      category: 'Luxe',
       price: 21.632,
       evaluation: 3.0,
       kilometers: 404,
       nights: 5,
       dateCheckIn: DateTime(2023, 05, 12),
       dateCheckOut: DateTime(2023, 05, 17),
+      isFavorite: false,
       images: [
         'assets/images/image_home_4.jpg',
         'assets/images/image_home_9.jpg',
@@ -73,12 +78,14 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
     ),
     Place(
       title: 'Austin, Texas, US',
+      category: 'Amazing pools',
       price: 21.633,
       evaluation: 4.5,
       kilometers: 404,
       nights: 5,
       dateCheckIn: DateTime(2023, 05, 12),
       dateCheckOut: DateTime(2023, 05, 17),
+      isFavorite: false,
       images: [
         'assets/images/image_home_6.jpg',
         'assets/images/image_home_10.jpg',
@@ -87,12 +94,14 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
     ),
     Place(
       title: 'Austin, Texas, US',
+      category: 'Bed & breakfasts',
       price: 18.909,
       evaluation: 5.0,
       kilometers: 404,
       nights: 5,
       dateCheckIn: DateTime(2023, 05, 12),
       dateCheckOut: DateTime(2023, 05, 17),
+      isFavorite: false,
       images: [
         'assets/images/image_home_7.jpg',
         'assets/images/image_home_8.jpg',
@@ -101,12 +110,14 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
     ),
     Place(
       title: 'Paraty, Brazil',
+      category: 'Beach',
       price: 21.635,
       evaluation: 5.0,
       kilometers: 404,
       nights: 5,
       dateCheckIn: DateTime(2023, 05, 12),
       dateCheckOut: DateTime(2023, 05, 17),
+      isFavorite: true,
       images: [
         'assets/images/image_home_5.jpg',
         'assets/images/image_home_8.jpg',
@@ -120,22 +131,26 @@ class _PlacesToTripsWidgetState extends State<PlacesToTripsWidget> {
 
 class Place {
   final String title;
+  final String category;
   final double price;
   final double evaluation;
   final double kilometers;
   final int nights;
   final DateTime dateCheckIn;
   final DateTime dateCheckOut;
+  final bool isFavorite;
   final List<String> images;
 
   Place({
     required this.title,
+    required this.category,
     required this.price,
     required this.evaluation,
     required this.kilometers,
     required this.nights,
     required this.dateCheckIn,
     required this.dateCheckOut,
+    required this.isFavorite,
     required this.images,
   });
 }

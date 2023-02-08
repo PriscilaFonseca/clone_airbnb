@@ -42,7 +42,11 @@ class _ListIconsCategoriesWidgetState extends State<ListIconsCategoriesWidget> {
                 width: size.width * 0.26,
                 child: IconButton(
                   padding: EdgeInsets.zero,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(
+                      () {},
+                    );
+                  },
                   icon: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

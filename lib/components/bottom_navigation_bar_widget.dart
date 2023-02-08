@@ -1,7 +1,7 @@
-import 'package:clone_airbnb/screen/account/account.dart';
+import 'package:clone_airbnb/screen/profile/profile.dart';
 import 'package:clone_airbnb/screen/explore/explore.dart';
-import 'package:clone_airbnb/screen/favorites/favorites.dart';
-import 'package:clone_airbnb/screen/messages/messages.dart';
+import 'package:clone_airbnb/screen/wishlist/wishlist.dart';
+import 'package:clone_airbnb/screen/inbox/inbox.dart';
 import 'package:clone_airbnb/screen/trips/trips.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +18,10 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
 
   final List<Widget> _screensBottomNavigation = const [
     ExploreScreenWidget(),
-    FavoritesScreenWidget(),
+    WishListScreenWidget(),
     TripsScreenWidget(),
-    MessagesScreenWidget(),
-    AccountScreenWidget(),
+    InboxScreenWidget(),
+    ProfileScreenWidget(),
   ];
 
   void _toggleIndex(int index) {
